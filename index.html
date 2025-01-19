@@ -1,12 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./src/output.css" rel="stylesheet" />
     <title>Alpha-Game</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <body class="bg-black">
+    <section
+      class="text-center min-h-screen flex flex-col relative justify-evenly"
+    >
+      <!-- gradient background -->
+      <div
+        class="w-[50vh] min-h-screen m-auto bg-gradient-to-b from-[#E855DE] via-[#6C0EEB] via-40% to-[#5400EE57] to-70% absolute inset-0"
+      ></div>
+      <!-- title screen -->
+      <div class="m-auto relative text-white">
+        <h1 class="anton-regular text-9xl">ALPHABET CLASH</h1>
+        <h3 class="poppins-medium text-xl my-14">
+          Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+        </h3>
+        <button class="btn bg-white text-[#000] poppins-semibold">
+          Play Now
+        </button>
+      </div>
+      <!-- stage screen -->
+      <div class="flex flex-col gap-8 hidden">
+        <!-- letter stage -->
+        <div
+          class="artboard artboard-horizontal phone-4 bg-[#ffffffb3] border-[#010313cc] border-[20px] box-border rounded-2xl relative mx-auto flex flex-col"
+        >
+          <p
+            class="bg-[#2F2941] text-white mx-auto px-7 py-4 -mt-5 rounded-b-lg"
+          >
+            Don't look at the keyboard while playing
+          </p>
+          <span class="poppins-semibold text-9xl my-auto items-center">Y</span>
+        </div>
+        <!-- Keyboard -->
+        <div class="relative mx-auto">
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd class="kbd kbd-lg">q</kbd>
+            <kbd class="kbd kbd-lg">w</kbd>
+            <kbd class="kbd kbd-lg">e</kbd>
+            <kbd class="kbd kbd-lg">r</kbd>
+            <kbd class="kbd kbd-lg">t</kbd>
+            <kbd class="kbd kbd-lg bg-[#FFA500]">y</kbd>
+            <kbd class="kbd kbd-lg">u</kbd>
+            <kbd class="kbd kbd-lg">i</kbd>
+            <kbd class="kbd kbd-lg">o</kbd>
+            <kbd class="kbd kbd-lg">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd class="kbd kbd-lg">a</kbd>
+            <kbd class="kbd kbd-lg">s</kbd>
+            <kbd class="kbd kbd-lg">d</kbd>
+            <kbd class="kbd kbd-lg">f</kbd>
+            <kbd class="kbd kbd-lg">g</kbd>
+            <kbd class="kbd kbd-lg">h</kbd>
+            <kbd class="kbd kbd-lg">j</kbd>
+            <kbd class="kbd kbd-lg">k</kbd>
+            <kbd class="kbd kbd-lg">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd class="kbd kbd-lg">z</kbd>
+            <kbd class="kbd kbd-lg">x</kbd>
+            <kbd class="kbd kbd-lg">c</kbd>
+            <kbd class="kbd kbd-lg">v</kbd>
+            <kbd class="kbd kbd-lg">b</kbd>
+            <kbd class="kbd kbd-lg">n</kbd>
+            <kbd class="kbd kbd-lg">m</kbd>
+            <kbd class="kbd kbd-lg">/</kbd>
+          </div>
+        </div>
+        <!-- game info -->
+        <div class="flex justify-between mx-32">
+          <!-- life badge -->
+          <div
+            class="badge badge-lg bg-[#894189] rounded-badge border-none text-white inter-medium px-8 py-4"
+          >
+            <span>Life </span>
+            <img src="./images/Vector.svg" alt="" srcset="" class="mx-2" />
+            <span> 5</span>
+          </div>
+          <!-- score badge -->
+          <div
+            class="badge badge-lg bg-[#360490] rounded-badge border-none text-white inter-medium px-8 py-4"
+          >
+            <span>Score </span>
+            <img
+              src="./images/monetization_on.svg"
+              alt=""
+              srcset=""
+              class="mx-2"
+            />
+            <span> 0</span>
+          </div>
+        </div>
+      </div>
+      <!-- game over screen -->
+      <div
+        class="relative text-white flex flex-col gap-4 bg-gradient-to-br from-[#ffffff8c] to-transparent mx-auto rounded-2xl p-4 border-[#ffffff33] border-[1px] hidden"
+      >
+        <h3 class="poppins-extrabold text-6xl">
+          Score <span class="poppins-semibold">:</span>
+          <span class="poppins-medium">14</span>
+        </h3>
+        <button class="btn poppins-semibold text-2xl mx-auto">
+          Play Again
+        </button>
+        <p class="poppins-medium text-lg">Practice will make you Pro</p>
+      </div>
+    </section>
   </body>
 </html>
